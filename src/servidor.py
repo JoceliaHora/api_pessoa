@@ -13,12 +13,8 @@ def test():                       # realiza o processamento
 @app.route('/', methods=["POST"])    #path
 def cadastrar():
     print(request.json)
-    return "cadastrar"
+    return banco.salvaNoBanco(request.json)
 
-@app.route('/buscar', methods =["GET"])
-def buscar():
-    print(request.args.get('cpf'))
-    return "buscar"
 
 @app.route('/listar', methods = ["GET"])
 def listar():
