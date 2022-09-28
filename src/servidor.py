@@ -22,7 +22,7 @@ def listar():
 
 @app.route('/', methods =["DELETE"])
 def deletar():
-    print(request.args.get("cpf"))
-    return "deletar"
+    cpf = request.args.get("cpf")
+    return banco.deletarPessoa(cpf)
 
 app.run(host='0.0.0.0', port=81)
