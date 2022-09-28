@@ -22,7 +22,7 @@ def buscar():
 
 @app.route('/listar', methods = ["GET"])
 def listar():
-    return "listar"
+    return banco.listarPessoas()
 
 @app.route('/', methods =["DELETE"])
 def deletar():
