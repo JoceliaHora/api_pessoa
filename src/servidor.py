@@ -7,4 +7,16 @@ app = Flask(__name__)
 def test():
     return 'hello world'
 
+@app.route('/cadastrar')    #path
+def cadastrar():
+    return "cadastrar"
+
+@app.route('/buscar')
+def buscar():
+    return "buscar"
+
+@app.route('/listar')
+def listar():
+    return "listar"
+
 app.run(host='0.0.0.0', port=81)
