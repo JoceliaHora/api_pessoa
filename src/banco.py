@@ -1,4 +1,5 @@
 import json
+import os.path
 
 
 def testeBanco():
@@ -10,6 +11,7 @@ def listarPessoas():
         json_object = json.load(openfile)  # convertendo o conteudo do arquivo em obj json
         return json_object                      # retornando json
 
+
 def salvaNoBanco(pessoa):
 
     with open("src/sample.json", "r") as outfile:  #abre o arquivo
@@ -18,7 +20,6 @@ def salvaNoBanco(pessoa):
         json_object = json.dumps(dic, indent=4)    # convertendo de json pra string
         with open("src/sample.json", "w") as outfile:  #abrindo arquivo 
             outfile.write(json_object)             #gravando as informações no arquivo
-
 
     return "pessoa salva com sucesso "
 
