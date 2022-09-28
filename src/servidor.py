@@ -1,11 +1,14 @@
 #importando o flask pra criar um servidor REST
 
 from flask import Flask, request
+import banco
+
 app = Flask(__name__)
 
 @app.route('/', methods=["GET"])  #define o endpoint
 def test():                       # realiza o processamento
-    return "hello world"
+    return "teste servidor OK \n" + banco.testeBanco()
+
 
 @app.route('/', methods=["POST"])    #path
 def cadastrar():
